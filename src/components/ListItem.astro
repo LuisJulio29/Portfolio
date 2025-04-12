@@ -22,7 +22,15 @@ const { title, company, description, link, date } = Astro.props
       >
 
       <h3 class="text-xl font-bold text-blue-800 dark:text-blue-400">{title}</h3>
-      <h4 class="font-semibold text-xl text-gray-600 dark:text-white">{company}</h4>
+      {/* Añadir aria-label aquí si company tiene valor */}
+      {company && (
+         <h4 
+           class="font-semibold text-xl text-gray-600 dark:text-white" 
+           aria-label={company} 
+         >
+           {company}
+         </h4>
+      )}
       <time class="p-0 m-0 text-sm text-gray-600/80 dark:text-white/80">{date}</time>
     </div>
   </div>
@@ -43,12 +51,12 @@ const { title, company, description, link, date } = Astro.props
             fill="none"
             stroke-linecap="round"
             stroke-linejoin="round"
+            aria-hidden="true"
           >
-            <p>
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M9 6l6 6l-6 6" />
-            </p>
-          </svg>
+            {/* <title>Icono de flecha derecha</title>  Añadir title si el SVG no es puramente decorativo */}
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M9 6l6 6l-6 6" />
+           </svg>
         </LinkInline>
       )
     }
