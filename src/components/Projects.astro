@@ -1,6 +1,7 @@
 ---
 import GitHub from "./icons/GitHub.astro"
 import NextJS from "./icons/NextJS.astro"
+import Java from "./icons/Java.astro"
 import PHP from "./icons/PHP.astro"
 import CSS from "./icons/CSS.astro"
 import HTML from "./icons/HTML.astro"
@@ -17,10 +18,10 @@ import Laravel from "./icons/Laravel.astro"
 import Link from "./icons/Link.astro"
 import LinkButton from "./LinkButton.astro"
 import { Image } from 'astro:assets';
-import ImageTLteam from "./images/tlteam.webp"
-import ImageSH from "./images/shortlinks.webp"
-import ImageCMMS from "./images/cmms.webp"
-import ImageHC from "./images/hc.webp"
+import Ticnify from "/public/images/ticnify.webp"
+import ImageCMMS from "/public/images/cmms.webp"
+import Comersca from "/public/images/comersca.webp"
+import Medihelp from "/public/images/medihelp.webp"
 
 
 const TAGS = {
@@ -28,6 +29,11 @@ const TAGS = {
     name: "Next.js",
     class: "bg-black text-white",
     icon: NextJS,
+  },
+  JAVA: {
+    name: "Java",
+    class: "bg-white text-black text-center",
+    icon: Java,
   },
   MONGO: {
     name: "MongoDB",
@@ -100,37 +106,35 @@ const PROJECTS = [
     title: "Sistema computarizado de gestión de mantenimiento (CMMS)",
     description:
       "Proyecto SAAS que ayuda a las empresas a gestionar los procesos y la información de equipos, mantenimientos, proveedeores, clientes, respuestos, etc, de forma centralizada.",
-    link: "https://cmms-biotech.onrender.com/",
+    link: "",
     github: "",
     image: ImageCMMS,
     tags: [TAGS.NODE, TAGS.BOOTSTRAP],
   },
   {
-    title: "TL TEAM (Academia online)",
+    title: "Ticnify",
     description:
-      "Academia de educación online gratuita para aprender diferentes habilidades de TI, contiene una recopilación de cursos, rutas de aprendizaje, y los estudiantes pueden dejar sus comentarios en los cursos.",
-    link: "https://tlteam.web.app/",
-    github: "https://github.com/SMITH367/OnlineAcademy",
-    image: ImageTLteam,
-    tags: [TAGS.REACT, TAGS.NODE, TAGS.MONGO],
+      "Sistema de información de Herramientas TIC para la Gestión de Proyectos de Tecnología, Innovación y Desarrollo.",
+    link: "https://herramientas-tic-xi.vercel.app/",
+    github: "https://github.com/LuisJulio29/herramientas-tic",
+    image: Ticnify,
+    tags: [TAGS.NEXT, TAGS.POSTGRESQL,TAGS.CSS],
   },
   {
-    title: "Sistema de gestión de historias clínicas",
+    title: "Comersca",
     description:
-      "Proyecto de código abierto que permite a consultorios medicos privados gestionar sus pacientes, historias clinicas y recetas, de manera sencilla.",
-    link: "https://historyclinicdemo.web.app/",
-    github: "https://github.com/SMITH367/Clinic-History",
-    image: ImageHC,
-    tags: [TAGS.ANGULAR, TAGS.NODE, TAGS.MYSQL],
+      "Sistema de Gestion de Comercios para la ciudad de Cartagena, donde los usuarios pueden gestionar sus comercios y los clientes pueden ver los comercios disponibles.",
+    github: "https://github.com/LuisJulio29/Association-of-merchants",
+    image: Comersca,
+    tags: [TAGS.JAVA,],
   },
   {
-    title: "Shortlinks (Acortador de enlaces)",
+    title: "MediHelp",
     description:
-      "Shortlinks es un sistema para generar url's acortadas, donde los usuarios pueden crear y gestionar sus enlaces acortados, asi como crear enlaces acortados personalizados.",
-    link: "https://sh-link.web.app/",
-    github: "https://github.com/SMITH367/ShortLinks",
-    image: ImageSH,
-    tags: [TAGS.ANGULAR, TAGS.LARAVEL,TAGS.POSTGRESQL],
+      "Sistema de gestion de Citas psicologicas para la Univeridad de Cartagena, facilita a los estudiantes universitarios el acceso y manejo de los servicios psicológicos.",
+    github: "https://github.com/LuisJulio29/MediHelp-ISI-Frontend",
+    image: Medihelp,
+    tags: [TAGS.REACT, TAGS.NODE,TAGS.MONGO],
   },
   
 ]
